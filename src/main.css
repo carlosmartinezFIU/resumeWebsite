@@ -14,6 +14,10 @@ body{
 
 /***********         Navbar       ***********/
 
+#mobile_menu_btn{
+    display: none;
+}
+
 .nav_container{
     display: flex;
     flex-direction: row;
@@ -405,6 +409,11 @@ body{
 
 
 @media screen and (max-width: 550px) {
+
+    #mobile_menu_btn{
+        display: block;
+    }
+
     #mobile_menu_btn{
         position: absolute;
         right: 36px;
@@ -524,10 +533,11 @@ body{
     }
 
     .slider_panel{
-        width: auto;
+        width: 350px;
         align-items: center;
         display: flex;
         margin: 60px 0 0 0;
+        height: 190px;
     }
 
     /******** Work **************/
