@@ -1,6 +1,7 @@
 import style from '../main.css';
 import spaceImage from '../assets/space-project-screen.png';
 import bugImageLogo from '../assets/bx-bug.svg';
+import galleria from '../assets/galleriaLanding.png';
 
 function createAbout(){
     const aboutContainer = document.createElement('div');
@@ -18,16 +19,16 @@ function createAbout(){
     
 
     let contentAbout = document.createElement('p');
-    contentAbout.innerHTML = 'Hello, My name is Carlos and i am excited for my new adventure in this exciting career. My curiosity for coding started in 2015. Coming out of the Marine Corps Service, Ive always wondered how web-development and the inner workings of the engine worked. '
+    contentAbout.innerHTML = "Hello, My name is Carlos and I am excited for my new adventure in this exciting career. My curiosity for coding started in 2015. Coming out of the Marine Corps Service, I've always wondered how web-development and the inner workings of the engine worked.";
 
     let contentCont = document.createElement('p');
-    contentCont.innerHTML = 'Advancing to now i have complete Univeristy and applying to create an exciting future within my career.'
+    contentCont.innerHTML = "Advancing to now I have completed my studies and applying to create an exciting future within my career.";
 
     const skillsContainer = document.createElement('div');
     skillsContainer.classList.add('skills_container');
 
     let skillsTitle = document.createElement('p');
-    skillsTitle.innerHTML = 'Here are some of the skills i have aquired within my studies: '
+    skillsTitle.innerHTML = "Here are some of the skills i have aquired within my studies: "
 
     let skillsList = document.createElement('ul');
     skillsList.classList.add('skill_list');
@@ -89,9 +90,19 @@ function createAbout(){
     itemSix.id = 'Git';
     itemSix.innerHTML = 'Git';
 
+    let rotate = document.createElement("div");
+    rotate.classList.add("about_rotate");
+    rotate.id = "about_rotate";
     let imageOne = document.createElement('img');
     imageOne.classList.add('slider_panel');
     imageOne.src = spaceImage;
+
+    let galleryImg = document.createElement('img');
+    galleryImg.classList.add('mobile_gallery_img');
+    galleryImg.src = galleria;
+    
+    
+    rotate.append(imageOne, galleryImg);
 
     
     let itemContainer = document.createElement('div');
@@ -124,7 +135,7 @@ function createAbout(){
 
     aboutPara.append(contentAbout, contentCont, skillsContainer,);
 
-    aboutContainerContent.append(aboutPara, imageOne);
+    aboutContainerContent.append(aboutPara, rotate);
 
     aboutContainer.append(contentHeader, aboutContainerContent);
 
@@ -137,8 +148,30 @@ function loadAbout(){
     const getContent = document.getElementById('content');
 
     getContent.append(aboutCreated);
+    imageRotation();
 
 
 }
 
+function imageRotation(){
+    const getRotate = document.getElementById("about_rotate");
+
+    let images = getRotate.getElementsByTagName("img");
+    for(let timer  = 1; timer < images.length; timer++)
+    {
+        images[timer].style.display ="none";
+    }
+
+    let count = 0;
+    setInterval(function(){
+        for(let index = 0; index < images.length; index++){
+            images[index].style.display = "none";
+        }
+        images[count].style.display = "block";
+        count++;
+        if(count == images.length){
+            count = 0;
+        }
+    }, 10000);
+}
 export default loadAbout;

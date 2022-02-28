@@ -19,7 +19,7 @@ function createHeader(){
     introSep.classList.add('header_desc');
 
     let introThree = document.createElement('p');
-    introThree.innerHTML = 'Recent Florida International University Graduate. Currently, Im currently focused on becoming a Fullstack Developer';
+    introThree.innerHTML = "Recent Florida International University Graduate. With a Bachelors in Computer Science, I'm focused on becoming a Fullstack Developer.";
 
     headerContent.append(intro, introTwo,introSep, introThree);
     headerContainer.append(headerContent);

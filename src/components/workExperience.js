@@ -16,23 +16,28 @@ function createWork(){
     jobsTabsContainer.classList.add('jobs_tabs-container');
 
     let marineCorps = document.createElement('button');
+    marineCorps.classList.add("marine_btn");
     marineCorps.innerHTML = 'Marine Corps';
     marineCorps.id = 'marine_btn';
 
     let plantDesign = document.createElement('button');
+    plantDesign.classList.add("plant_btn");
     plantDesign.innerHTML = 'Planst In Design';
     plantDesign.id = 'plant_btn';
 
 
     let a1aSodSand = document.createElement('button');
+    a1aSodSand.classList.add("a1a_btn");
     a1aSodSand.innerHTML = 'A1A Sod Sand & Soil';
     a1aSodSand.id = 'a1a_btn';
 
     let kendallBaptist = document.createElement('button');
+    kendallBaptist.classList.add("kendall_btn");
     kendallBaptist.innerHTML = 'Kendall Baptist Hospital';
     kendallBaptist.id = 'kendall_btn';
 
     let malibuClubhouse = document.createElement('button');
+    malibuClubhouse.classList.add("malibu_btn");
     malibuClubhouse.innerHTML = 'Malibu Clubhouse';
     malibuClubhouse.id = 'malibu_btn';
     malibuClubhouse.classList.add("active_panel_btn");
@@ -371,30 +376,55 @@ function showPanel(){
     malibuClubhouse.addEventListener('click', function(){
         getPanel.textContent = '';
         getPanel.append(panel0);
+        malibuClubhouse.classList.add("active_panel_btn");
+        plantDesign.classList.remove("active_panel_btn");
+        kendallBaptist.classList.remove("active_panel_btn");
+        a1aSodSand.classList.remove("active_panel_btn");
+        marineCorps.classList.remove("active_panel_btn");
     });
 
     kendallBaptist.addEventListener('click', function(){
         getMalibuBtn();
         getPanel.textContent = '';
         getPanel.append(panel1);
+        kendallBaptist.classList.add("active_panel_btn");
+        plantDesign.classList.remove("active_panel_btn");
+        malibuClubhouse.classList.remove("active_panel_btn");
+        a1aSodSand.classList.remove("active_panel_btn");
+        marineCorps.classList.remove("active_panel_btn");
     });
 
     a1aSodSand.addEventListener('click', function(){
         getMalibuBtn();
         getPanel.textContent = '';
         getPanel.append(panel2);
+        a1aSodSand.classList.add("active_panel_btn");
+        kendallBaptist.classList.remove("active_panel_btn");
+        malibuClubhouse.classList.remove("active_panel_btn");
+        plantDesign.classList.remove("active_panel_btn");
+        marineCorps.classList.remove("active_panel_btn");
     });
 
     plantDesign.addEventListener('click', function(){
         getMalibuBtn();
         getPanel.textContent = '';
         getPanel.append(panel3);
+        plantDesign.classList.add("active_panel_btn");
+        kendallBaptist.classList.remove("active_panel_btn");
+        malibuClubhouse.classList.remove("active_panel_btn");
+        a1aSodSand.classList.remove("active_panel_btn");
+        marineCorps.classList.remove("active_panel_btn");
     });
 
     marineCorps.addEventListener('click', function(){
         getMalibuBtn();
         getPanel.textContent = '';
         getPanel.append(panel4);
+        marineCorps.classList.add("active_panel_btn");
+        kendallBaptist.classList.remove("active_panel_btn");
+        malibuClubhouse.classList.remove("active_panel_btn");
+        a1aSodSand.classList.remove("active_panel_btn");
+        plantDesign.classList.remove("active_panel_btn");
     });
 
 }
