@@ -237,6 +237,18 @@ body{
     filter: invert(12%) sepia(70%) saturate(5863%) hue-rotate(334deg) brightness(96%) contrast(112%);
 }
 
+#galleria_img{
+    width: 322px;
+    height: 250px;
+    object-fit: fill;
+    border-radius: 10px;
+}
+#folder_two{
+    position: relative;
+    bottom: 34px;
+    left: 9px;
+    filter: invert(12%) sepia(70%) saturate(5863%) hue-rotate(334deg) brightness(96%) contrast(112%);
+}
 
 /***********        Work       ************/
 

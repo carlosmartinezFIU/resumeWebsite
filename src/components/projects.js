@@ -1,13 +1,14 @@
 import style from '../main.css';
 import boxFolderLogo from '../assets/bx-folder.svg';
 import spaceImage from '../assets/space-project-screen.png';
+import galleria from '../assets/galleriaLanding.png';
 
-function panels(source, name, folderName){
+function panels(source, name, folderName, anchorTag){
     const panelContainer = document.createElement('div');
     panelContainer.classList.add('project_panel');
 
     const linkAnchor = document.createElement('a');
-    linkAnchor.href = "https://carlosmartinezfiu.github.io/space-tour/";
+    linkAnchor.href = anchorTag;
     linkAnchor.target = "_blank";
     linkAnchor.id = "link_anchor";
 
@@ -47,8 +48,8 @@ function createProject(){
     const projectContainer = document.createElement('div');
     projectContainer.classList.add('project_container');
 
-    const panelOne  = panels(spaceImage , 'space_img', 'folder_one');
-    const panelTwo  = panels();
+    const panelOne  = panels(spaceImage , 'space_img', 'folder_one', "https://carlosmartinezfiu.github.io/space-tour/");
+    const panelTwo  = panels(galleria, 'galleria_img' , 'folder_two', "https://carlosmartinezfiu.github.io/galleria-beta/");
     const panelThree  = panels();
 
     projectContainer.append(panelOne, panelTwo, panelThree);
