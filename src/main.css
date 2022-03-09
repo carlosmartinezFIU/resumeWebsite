@@ -221,14 +221,14 @@ body{
 }
 
 .project_panel{
-    width: 322px;
+    width: 385px;
     height: 250px;
     border: #E00240 2px solid;
     border-radius: 10px;
 }
 
 #space_img{
-    width: 322px;
+    width: 385px;
     height: 250px;
     object-fit: fill;
     border-radius: 10px;
@@ -241,12 +241,25 @@ body{
 }
 
 #galleria_img{
-    width: 322px;
+    width: 385px;
     height: 250px;
     object-fit: fill;
     border-radius: 10px;
 }
 #folder_two{
+    position: relative;
+    bottom: 34px;
+    left: 9px;
+    filter: invert(12%) sepia(70%) saturate(5863%) hue-rotate(334deg) brightness(96%) contrast(112%);
+}
+
+#archstudio_img{
+    width: 385px;
+    height: 250px;
+    object-fit: fill;
+    border-radius: 10px;
+}
+#folder_three{
     position: relative;
     bottom: 34px;
     left: 9px;
@@ -594,6 +607,12 @@ body{
         width: 350px;
         height: 190px;
     }
+    #archstudio_img{
+        width: 350px;
+        height: 190px;
+    }
+
+
     .project_panel{
         width: 350px;
         height: 190px;

@@ -2,6 +2,8 @@ import style from '../main.css';
 import boxFolderLogo from '../assets/bx-folder.svg';
 import spaceImage from '../assets/space-project-screen.png';
 import galleria from '../assets/galleriaLanding.png';
+import archStudio from '../assets/archstudio.png';
+
 
 function panels(source, name, folderName, anchorTag){
     const panelContainer = document.createElement('div');
@@ -50,7 +52,7 @@ function createProject(){
 
     const panelOne  = panels(spaceImage , 'space_img', 'folder_one', "https://carlosmartinezfiu.github.io/space-tour/");
     const panelTwo  = panels(galleria, 'galleria_img' , 'folder_two', "https://carlosmartinezfiu.github.io/galleria-beta/");
-    const panelThree  = panels();
+    const panelThree  = panels(archStudio, "archstudio_img", "folder_three", "https://carlosmartinezfiu.github.io/archstudios/");
 
     projectContainer.append(panelOne, panelTwo, panelThree);
 
