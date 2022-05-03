@@ -1,5 +1,5 @@
 :root{
-    background-color: #E4E3DF;
+    background-color: #151822;
 }
 
 html{
@@ -36,7 +36,7 @@ body{
     width: 3rem;
     margin-left: 7rem;  
     animation: rotate 0.9s infinite linear;
-    filter: invert(8%) sepia(100%) saturate(7485%) hue-rotate(340deg) brightness(96%) contrast(98%);
+    filter: invert(28%) sepia(52%) saturate(2939%) hue-rotate(232deg) brightness(90%) contrast(104%);
 }
 
 @keyframes rotate{
@@ -55,7 +55,7 @@ body{
 
 .list_container button a{
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
 .list_container button{
@@ -77,20 +77,20 @@ body{
     margin-right: 3rem;
     width: 6rem;
     border-radius: 10px;
-    border: #E00240 1.9px solid;
+    border: #4f46e5 1.9px solid;
     height: 3rem;
     line-height: 10px;
     cursor: pointer;
 }
 
 .resume_btn:hover{
-    background-color: #E00240;
+    background-color: #4f46e5;
     color: whitesmoke;
 }
 
 .resume_btn a{
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
 #menu_btn{
@@ -110,14 +110,14 @@ body{
 .header_container h1{
     font-size: 20px;
     font-weight: 300;
-    color: #E00240;
+    color: #fff;
 }
 
 .header_container .name{
     font-size: 70px;
     font-weight: 700;
     margin: 0;
-    color: black;
+    color: #fff;
     font-family: 'Mukta', sans-serif;
 
 }
@@ -126,16 +126,23 @@ body{
     font-size: 70px;
     font-weight: 600;
     margin: 0;
-    color: #E00240;
     line-height: 1;
     font-family: 'Mukta', sans-serif;
+}
+
+.header_desc{
+    background-image: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(79, 70, 229) 83%, rgb(0, 212, 255) 100%);
+    background-clip: text;
+    text-decoration-color: transparent;
+    display: inline;
+    color: transparent;
 }
 
 .header_container p{
     font-size: 20px;
     font-weight: 300;
     margin: 0;
-    color: black;
+    color: #fff;
     width: 23.938rem;
     line-height: 1.3;
     margin-top: 1.5rem;
@@ -166,7 +173,7 @@ body{
 
 .about_container h3{
     font-size: 2rem;
-    color: black;
+    color: #fff;
     font-weight: 600;
     font-family: 'Mukta', sans-serif;
 }
@@ -175,7 +182,7 @@ body{
     width: 30.5rem;
     font-size: 20px;
     line-height: 1.3;
-    color: black;
+    color: #fff;
     font-family: 'Roboto Slab';
 }
 
@@ -186,6 +193,7 @@ body{
     list-style: none;
     margin-left: -40px;
     line-height: 1.5;
+    color: #4f46e5;
 }
 
 .itemContainer{
@@ -200,17 +208,49 @@ body{
 
 
 /***********        Projects       ***************************************/
+.javascript-language{
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.html-language{
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.css-language{
+    color: rgb(0, 0, 203);
+}
+
+.react-framework{
+    font-size: 20px;
+    color: #fff;
+}
+
+
 
 .project_wrapper{
     margin: auto;
-    width: 875px;
     height: auto;
     display: block;
+    background: #4f46e5;
 }
 
 .project_title_container{
     text-align: center;
     font-size: 2rem;
+    color: #fff;
+}
+
+.language-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
 }
 
 .project_container{
@@ -218,14 +258,18 @@ body{
     grid-template-columns: repeat(2,1fr);
     row-gap: 50px;
     column-gap: 188px;
+    width: 969px;
+    margin: auto;
 }
 
 .project_panel{
     width: 385px;
     height: 250px;
-    border: #E00240 2px solid;
     border-radius: 10px;
 }
+
+
+
 
 #space_img{
     width: 385px;
@@ -266,6 +310,30 @@ body{
     filter: invert(12%) sepia(70%) saturate(5863%) hue-rotate(334deg) brightness(96%) contrast(112%);
 }
 
+
+#react-api{
+    width: 385px;
+    height: 250px;
+    object-fit: fill;
+    border-radius: 10px;
+}
+#folder_four{
+    position: relative;
+    bottom: 34px;
+    left: 9px;
+    filter: invert(12%) sepia(70%) saturate(5863%) hue-rotate(334deg) brightness(96%) contrast(112%);
+}
+
+#pet_img{
+    width: 385px;
+    height: 250px;
+    object-fit: fill;
+    border-radius: 10px;
+  
+}
+
+
+
 /***********        Work       ************/
 
 .work_container{
@@ -277,7 +345,7 @@ body{
 .work_title{
     
     font-size: 2rem;
-    color: black;
+    color: #fff;
     font-weight: 600;
     text-align: center;
     font-family: 'Mukta', sans-serif;
@@ -297,8 +365,8 @@ body{
 }
 
 .active_panel_btn{
-    font-size: 17.5px;
-    color: #E00240 !important;
+    font-size: 13.5px;
+    color: #4f46e5 !important;
 }
 
 .malibu_btn, .kendall_btn, .a1a_btn, .plant_btn, .marine_btn{
@@ -307,7 +375,7 @@ body{
     line-height: 4;
     padding: 0;
     text-align: left;
-    color: black;
+    color: #fff;
     cursor: pointer;
     margin-left: 2rem;
     border-radius: 10px;
@@ -321,8 +389,9 @@ body{
 }
 
 
-.panel_0, .panel_1, .panel_2, .panel_3, .panel_4 h3{
+.panel_0, .panel_1, .panel_2, .panel_3, .panel_4,  h3{
     font-family: 'Mukta', sans-serif;
+    color: #fff;
 }
 
 .job_description_list{
@@ -383,21 +452,27 @@ body{
 /*************     Footer    ******************/
 
 .footer_container{
-    margin: 11rem 2rem 0 2rem;
+    /* margin: 11rem 2rem 0 2rem; */
+    background: #4f46e5;
+    border-radius: 10px;
+    width: auto;
+    margin: auto;
 }
 
 .footer_container h2{
     text-align: center;
     font-size: 50px;
     font-family: 'Mukta', sans-serif;
+    color: #fff;
 }
 
 .footer_container p{
-    width: 215px;
+    width: 230px;
     text-align: center;
     justify-content: center;
     margin: auto;
     font-family: 'Roboto Slab';
+    color: #fff;
 }
 
 .footer_div{
@@ -408,6 +483,7 @@ body{
 .footer_div p{
     font-size: 12px;
     text-align: center;
+    color:#fff;
 }
 
 .footer_design{
@@ -418,8 +494,13 @@ body{
     text-align: center;
 }
 
+.email-link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #email{
-    color: #E00240;
+    color: #fff;
     font-weight: 600;
     width: auto;
     text-align: center;
@@ -440,15 +521,17 @@ body{
         top: 26px;
         width: 53px;
         cursor: pointer;
+        filter: invert(30%) sepia(79%) saturate(5999%) hue-rotate(241deg) brightness(93%) contrast(92%);
+    
     }
 
     #mobile_container{
-        background-color: #E4E3DF;
+        background-color: #151822;
         right: 0;
         position: absolute;
         width: 16rem;
         height: 100%;
-        border: 2px #E00240 solid;
+        border: 2px #4f46e5 solid;
     }
 
     #mobile_button_container{
@@ -462,7 +545,7 @@ body{
 
     #mobile_button_container button a{
         text-decoration: none;
-        color: #E00240;
+        color: #fff;
     }
     
     #mobile_button_container button:not(:last-child){
@@ -483,7 +566,7 @@ body{
         color: #E00240;
         width: 6rem;
         border-radius: 10px;
-        border: #E00240 1.9px solid;
+        border: #4f46e5 1.9px solid;
         height: 3rem;
         line-height: 10px;
         cursor: pointer;
@@ -496,6 +579,8 @@ body{
         top: 21px;
         width: 35px;
         cursor: pointer;
+        filter: invert(30%) sepia(79%) saturate(5999%) hue-rotate(241deg) brightness(93%) contrast(92%);
+    
     }
 
 
@@ -573,6 +658,7 @@ body{
         display: flex;
         flex-direction: column;
         margin: 0 0.5rem 0 0.5rem;
+        width: auto;
     }
 
     /*** Experience **************/
@@ -583,9 +669,11 @@ body{
 
     .jobs_tabs-container{
         width: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: inline-block;
+        height: 54px;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
     }
 
     #panel_container{
@@ -611,18 +699,24 @@ body{
         width: 350px;
         height: 190px;
     }
+    #react-api{
+        width: 350px;
+        height: 190px;
+    }
 
 
     .project_panel{
         width: 350px;
         height: 190px;
+        margin: auto;
     }
 
     .about_rotate{
         width: 350px;
         align-items: center;
         display: flex;
-        margin: 60px 0 0 0;
+        margin: auto;
+        margin-top: 60px;
         height: 190px;
     }
 
@@ -630,6 +724,10 @@ body{
     {
         width: 350px;
         height: 190px;
+    }
+
+    .skill_list{
+        width: 18.8rem;
     }
 
 

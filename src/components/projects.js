@@ -3,8 +3,13 @@ import boxFolderLogo from '../assets/bx-folder.svg';
 import spaceImage from '../assets/space-project-screen.png';
 import galleria from '../assets/galleriaLanding.png';
 import archStudio from '../assets/archstudio.png';
+import bookApi from '../assets/projectAA.png';
+import pet from '../assets/front-display.png';
 
-
+/*
+*   Panels function component to hold individual project images types
+*   types of languages and links to individual projects
+*/
 function panels(source, name, folderName, anchorTag){
     const panelContainer = document.createElement('div');
     panelContainer.classList.add('project_panel');
@@ -25,7 +30,7 @@ function panels(source, name, folderName, anchorTag){
     folderImg.src = boxFolderLogo;
 
 
-    panelContainer.append(panelImg, folderImg);
+    panelContainer.append(panelImg);
 
     linkAnchor.append(panelContainer);
 
@@ -53,8 +58,92 @@ function createProject(){
     const panelOne  = panels(spaceImage , 'space_img', 'folder_one', "https://carlosmartinezfiu.github.io/space-tour/");
     const panelTwo  = panels(galleria, 'galleria_img' , 'folder_two', "https://carlosmartinezfiu.github.io/galleria-beta/");
     const panelThree  = panels(archStudio, "archstudio_img", "folder_three", "https://carlosmartinezfiu.github.io/archstudios/");
+    const panelFour = panels(bookApi, 'react-api', 'folder_four', "https://carlosmartinezfiu.github.io/book-info/");
+    const panelFive = panels(pet, 'pet_img', 'folder_five', 'https://node-pet-app-finder.herokuapp.com');
 
-    projectContainer.append(panelOne, panelTwo, panelThree);
+
+    const panelProjectContainerOne = document.createElement("div");
+    panelProjectContainerOne.classList.add("project-panel-container-one");
+
+    const panelProjectContainerTwo = document.createElement("div");
+    panelProjectContainerTwo.classList.add("project-panel-container-two");
+
+    const panelProjectContainerThree = document.createElement("div");
+    panelProjectContainerThree.classList.add("project-panel-container-three");
+
+    const panelProjectContainerFour = document.createElement("div");
+    panelProjectContainerFour.classList.add("project-panel-container-four");
+
+    const panelProjectContainerFive = document.createElement("div");
+    panelProjectContainerFive.classList.add("project-panel-container-five");
+
+    let languageContainer = document.createElement("div");
+    languageContainer.classList.add("language-container");
+    let javascriptLanguage = document.createElement("p");
+    javascriptLanguage.innerText = "Space-Tour";
+    javascriptLanguage.classList.add("javascript-language");
+    let htmlLanguage = document.createElement("p");
+    htmlLanguage.innerText = "Space tourism multi-page website, challenge from Frontend Mentor. Built with Javscript, Css and Html";
+    htmlLanguage.classList.add("html-language");
+    languageContainer.append(javascriptLanguage, htmlLanguage);
+
+
+
+    let languageContainerTwo = document.createElement("div");
+    languageContainerTwo.classList.add("language-container");
+    let javascriptLanguageTwo = document.createElement("p");
+    javascriptLanguageTwo.innerText = "Galleria";
+    javascriptLanguageTwo.classList.add("javascript-language");
+    let htmlLanguageTwo = document.createElement("p");
+    htmlLanguageTwo.innerText = "This is a multi-page art gallery website. Built with Javascript, Css and Html";
+    htmlLanguageTwo.classList.add("html-language");
+    languageContainerTwo.append(javascriptLanguageTwo, htmlLanguageTwo);
+
+
+
+    let languageContainerThree = document.createElement("div");
+    languageContainerThree.classList.add("language-container");
+    let javascriptLanguageThree = document.createElement("p");
+    javascriptLanguageThree.innerText = "Arch Studio";
+    javascriptLanguageThree.classList.add("javascript-language");
+    let htmlLanguageThree = document.createElement("p");
+    htmlLanguageThree.innerText = "Frontend Mentor 4-page site challenge. Responsive built, built with Javscript Css and Html";
+    htmlLanguageThree.classList.add("html-language");
+    languageContainerThree.append(javascriptLanguageThree, htmlLanguageThree);
+
+    let languageContainerFour = document.createElement("div");
+    languageContainerFour.classList.add("language-container");
+    let reactLanguageFour = document.createElement("p");
+    reactLanguageFour.innerText = "Google Books API";
+    let htmlLanguageFour = document.createElement("p");
+    htmlLanguageFour.innerText = "Proeject tht uses Google's Book Api to retrive and display books by title.";
+    htmlLanguageFour.classList.add("html-language");
+    reactLanguageFour.classList.add("react-framework");
+    languageContainerFour.append(reactLanguageFour, htmlLanguageFour);
+
+
+    let languageContainerFive = document.createElement("div");
+    languageContainerFive.classList.add("language-container");
+    let reactLanguageFive = document.createElement("p");
+    reactLanguageFive.innerText = "Petfinder API";
+    let htmlLanguageFive = document.createElement("p");
+    htmlLanguageFive.innerText = "Proeject tht uses Petfinder's Api to retrive and display pets for adoption. Used Node Js and Express to hide Api Key as well as GET/POST request.";
+    htmlLanguageFive.classList.add("html-language");
+    reactLanguageFive.classList.add("javascript-language");
+    languageContainerFive.append(reactLanguageFive, htmlLanguageFive);
+
+
+    //************** */
+    panelProjectContainerOne.append(panelOne, languageContainerThree);
+    panelProjectContainerTwo.append(panelTwo, languageContainerTwo);
+    panelProjectContainerThree.append(panelThree, languageContainer);
+    panelProjectContainerFour.append(panelFour, languageContainerFour);
+    panelProjectContainerFive.append(panelFive, languageContainerFive);
+
+
+    projectContainer.append(panelProjectContainerOne, panelProjectContainerTwo, 
+                            panelProjectContainerThree, panelProjectContainerFour, 
+                            panelProjectContainerFive);
 
     projectWrapper.append(titleContainer, projectContainer);
 

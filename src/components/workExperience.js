@@ -64,7 +64,7 @@ function createWork(){
     workTitle0.innerHTML = 'Front Desk/Pool Attendant';
 
     let jobDate = document.createElement('p');
-    jobDate.innerHTML = 'November 2019 - January 2021';
+    jobDate.innerHTML = 'November 2019 - May 2021';
 
     let jobDesContainer = document.createElement('div');
     jobDesContainer.classList.add('job_description_container');

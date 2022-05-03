@@ -14,16 +14,18 @@ function createFooter(){
     contentContainer.id = "content_container";
 
     let footerContent = document.createElement('p');
-    footerContent.innerHTML = 'Thank you for coming to my site, i would like to hear from in the near future, my inbox is always open';
+    footerContent.innerHTML = 'Thank you for coming to my site, I would like to hear from in the near future, my inbox is always open.';
     contentContainer.append(footerContent);
 
-    let emailContainer = document.createElement('div');
-    emailContainer.id = "email_container";
+
+    let emailLink = document.createElement("a");
+    emailLink.href = "mailto:martinezcarlosc99@gmail.com";
+    emailLink.classList.add("email-link");
 
     let email = document.createElement('p');
     email.innerText = 'martinezcarlosc99@gmail.com';
     email.id = 'email';
-    emailContainer.append(email);
+    emailLink.append(email);
 
     let footerOff = document.createElement('p');
     footerOff.innerHTML = 'Designed and Built by Carlos Maritnez-Cortes';
@@ -34,7 +36,7 @@ function createFooter(){
     div.classList.add('footer_div');
     div.append(footerOff);
 
-    contentContainer.append(email, div);
+    contentContainer.append(emailLink, div);
 
     footerContainer.append(footerTitle, contentContainer);
 
