@@ -2,6 +2,11 @@ import style from '../main.css';
 import spaceImage from '../assets/space-project-screen.png';
 import bugImageLogo from '../assets/bx-bug.svg';
 import galleria from '../assets/galleriaLanding.png';
+import reactLogo from '../assets/react-icon.svg';
+import javascriptLogo from '../assets/javascript-icon.svg';
+import nodeLogo from '../assets/node-icon.svg';
+import postgreLogo from '../assets/postgre-icon.svg';
+
 
 function createAbout(){
     const aboutContainer = document.createElement('div');
@@ -93,16 +98,42 @@ function createAbout(){
     let rotate = document.createElement("div");
     rotate.classList.add("about_rotate");
     rotate.id = "about_rotate";
+
+    let reactIconContainer = document.createElement('div');
+    let reactIcon = document.createElement('img');
+    reactIcon.classList.add("react-image-about");
+    reactIcon.src = reactLogo;
+    reactIconContainer.append(reactIcon);
+
+    let javaIconContainer = document.createElement('div');
+    let javascriptIcon = document.createElement('img');
+    javascriptIcon.classList.add("javascript-image-about");
+    javascriptIcon.src = javascriptLogo;
+    javaIconContainer.append(javascriptIcon);
+
+    let postgreIconContainer = document.createElement('div');
+    let postgreIcon = document.createElement('img');
+    postgreIcon.classList.add("postgres-image-about");
+    postgreIcon.src = postgreLogo;
+    postgreIconContainer.append(postgreIcon);
+
+    let nodeIconContainer = document.createElement('div');
+    let nodeIcon = document.createElement('img');
+    nodeIcon.classList.add("node-image-about");
+    nodeIcon.src = nodeLogo;
+    nodeIconContainer.append(nodeIcon);
+
+    /*
     let imageOne = document.createElement('img');
     imageOne.classList.add('slider_panel');
     imageOne.src = spaceImage;
-
+    *****************************************
     let galleryImg = document.createElement('img');
     galleryImg.classList.add('mobile_gallery_img');
     galleryImg.src = galleria;
+    */
     
-    
-    rotate.append(imageOne, galleryImg);
+    rotate.append(reactIconContainer, javaIconContainer, postgreIconContainer, nodeIconContainer);
 
     
     let itemContainer = document.createElement('div');
@@ -148,11 +179,12 @@ function loadAbout(){
     const getContent = document.getElementById('content');
 
     getContent.append(aboutCreated);
-    imageRotation();
+    //imageRotation();
 
 
 }
 
+/*
 function imageRotation(){
     const getRotate = document.getElementById("about_rotate");
 
@@ -174,4 +206,5 @@ function imageRotation(){
         }
     }, 10000);
 }
+*/
 export default loadAbout;

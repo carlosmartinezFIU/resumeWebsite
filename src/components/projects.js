@@ -5,6 +5,8 @@ import galleria from '../assets/galleriaLanding.png';
 import archStudio from '../assets/archstudio.png';
 import bookApi from '../assets/projectAA.png';
 import pet from '../assets/front-display.png';
+import imageVault from '../assets/image-vault.png';
+
 
 /*
 *   Panels function component to hold individual project images types
@@ -55,11 +57,13 @@ function createProject(){
     const projectContainer = document.createElement('div');
     projectContainer.classList.add('project_container');
 
-    const panelOne  = panels(spaceImage , 'space_img', 'folder_one', "https://carlosmartinezfiu.github.io/space-tour/");
-    const panelTwo  = panels(galleria, 'galleria_img' , 'folder_two', "https://carlosmartinezfiu.github.io/galleria-beta/");
-    const panelThree  = panels(archStudio, "archstudio_img", "folder_three", "https://carlosmartinezfiu.github.io/archstudios/");
+    //const panelOne  = panels(spaceImage , 'space_img', 'folder_one', "https://carlosmartinezfiu.github.io/space-tour/");
+    //const panelTwo  = panels(galleria, 'galleria_img' , 'folder_two', "https://carlosmartinezfiu.github.io/galleria-beta/");
+    //const panelThree  = panels(archStudio, "archstudio_img", "folder_three", "https://carlosmartinezfiu.github.io/archstudios/");
     const panelFour = panels(bookApi, 'react-api', 'folder_four', "https://carlosmartinezfiu.github.io/book-info/");
     const panelFive = panels(pet, 'pet_img', 'folder_five', 'https://node-pet-app-finder.herokuapp.com');
+    const panelSix = panels(imageVault, 'image-vault', 'folder_six', 'https://image-vault-insta-app.herokuapp.com');
+
 
 
     const panelProjectContainerOne = document.createElement("div");
@@ -76,6 +80,9 @@ function createProject(){
 
     const panelProjectContainerFive = document.createElement("div");
     panelProjectContainerFive.classList.add("project-panel-container-five");
+
+    const panelProjectContainerSix = document.createElement("div");
+    panelProjectContainerSix.classList.add("project-panel-container-six");
 
     let languageContainer = document.createElement("div");
     languageContainer.classList.add("language-container");
@@ -116,7 +123,7 @@ function createProject(){
     let reactLanguageFour = document.createElement("p");
     reactLanguageFour.innerText = "Google Books API";
     let htmlLanguageFour = document.createElement("p");
-    htmlLanguageFour.innerText = "Proeject tht uses Google's Book Api to retrive and display books by title.";
+    htmlLanguageFour.innerText = "Project tht uses Google's Book Api to retrive and display books by title.";
     htmlLanguageFour.classList.add("html-language");
     reactLanguageFour.classList.add("react-framework");
     languageContainerFour.append(reactLanguageFour, htmlLanguageFour);
@@ -127,23 +134,35 @@ function createProject(){
     let reactLanguageFive = document.createElement("p");
     reactLanguageFive.innerText = "Petfinder API";
     let htmlLanguageFive = document.createElement("p");
-    htmlLanguageFive.innerText = "Proeject tht uses Petfinder's Api to retrive and display pets for adoption. Used Node Js and Express to hide Api Key as well as GET/POST request.";
+    htmlLanguageFive.innerText = "Project tht uses Petfinder's Api to retrive and display pets for adoption. Used Node Js and Express to hide Api Key as well as GET/POST request.";
     htmlLanguageFive.classList.add("html-language");
     reactLanguageFive.classList.add("javascript-language");
     languageContainerFive.append(reactLanguageFive, htmlLanguageFive);
 
 
+
+    let languageContainerSix = document.createElement("div");
+    languageContainerSix.classList.add("language-container");
+    let reactLanguageSix = document.createElement("p");
+    reactLanguageSix.innerText = "Image-Vault";
+    let htmlLanguageSix = document.createElement("p");
+    htmlLanguageSix.innerText = "CRUD project build with React Node js Express  Postegresql and AWS S3. Allows to upload and image with location and description as well as edit a post and deleting.";
+    htmlLanguageSix.classList.add("html-language");
+    reactLanguageSix.classList.add("javascript-language");
+    languageContainerSix.append(reactLanguageSix, htmlLanguageSix);
+
+
+
     //************** */
-    panelProjectContainerOne.append(panelOne, languageContainerThree);
-    panelProjectContainerTwo.append(panelTwo, languageContainerTwo);
-    panelProjectContainerThree.append(panelThree, languageContainer);
+    //panelProjectContainerOne.append(panelOne, languageContainerThree);
+    //panelProjectContainerTwo.append(panelTwo, languageContainerTwo);
+    //panelProjectContainerThree.append(panelThree, languageContainer);
     panelProjectContainerFour.append(panelFour, languageContainerFour);
     panelProjectContainerFive.append(panelFive, languageContainerFive);
+    panelProjectContainerSix.append(panelSix, languageContainerSix);
 
 
-    projectContainer.append(panelProjectContainerOne, panelProjectContainerTwo, 
-                            panelProjectContainerThree, panelProjectContainerFour, 
-                            panelProjectContainerFive);
+    projectContainer.append(panelProjectContainerFour, panelProjectContainerFive, panelProjectContainerSix);
 
     projectWrapper.append(titleContainer, projectContainer);
 

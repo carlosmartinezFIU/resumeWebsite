@@ -132,9 +132,9 @@ body{
 
 .header_desc{
     background-image: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(79, 70, 229) 83%, rgb(0, 212, 255) 100%);
-    background-clip: text;
+    -webkit-background-clip: text;
     text-decoration-color: transparent;
-    display: inline;
+    display: inline-block;
     color: transparent;
 }
 
@@ -205,6 +205,40 @@ body{
     margin-right: 3px;
     filter: invert(8%) sepia(100%) saturate(7485%) hue-rotate(340deg) brightness(96%) contrast(98%);
 }
+
+.about_rotate{
+    width: 487px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.about_rotate div{
+    width: 71px;
+    cursor: pointer;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.react-image-about:hover{
+    filter: invert(25%) sepia(67%) saturate(7482%) hue-rotate(231deg) brightness(107%) contrast(102%);
+}
+
+.javascript-image-about:hover{
+    filter: invert(82%) sepia(78%) saturate(409%) hue-rotate(345deg) brightness(97%) contrast(94%);
+}
+
+.postgres-image-about:hover{
+    filter: invert(100%) sepia(1%) saturate(6670%) hue-rotate(28deg) brightness(107%) contrast(101%);
+}
+
+.node-image-about:hover{
+    filter: invert(41%) sepia(77%) saturate(375%) hue-rotate(70deg) brightness(91%) contrast(89%);
+}
+
 
 
 /***********        Projects       ***************************************/
@@ -325,11 +359,16 @@ body{
 }
 
 #pet_img{
-    width: 385px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     object-fit: fill;
     border-radius: 10px;
   
+}
+
+#image-vault{
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -519,7 +558,7 @@ body{
         position: absolute;
         right: 36px;
         top: 26px;
-        width: 53px;
+        width: 48px;
         cursor: pointer;
         filter: invert(30%) sepia(79%) saturate(5999%) hue-rotate(241deg) brightness(93%) contrast(92%);
     
@@ -586,6 +625,7 @@ body{
 
     .dark-Light_btn{
         margin-left: 3rem;
+        width: 2.5rem;
     }
     
     .btn_container{
@@ -603,16 +643,17 @@ body{
     }
 
     .header_container .name{
-        font-size: 38px;
+        font-size: 30px;
     }
 
     .header_container .header_desc{
-        font-size: 34px;
+        font-size: 30px;
         margin: 0.8rem 0 0 0;
     }
 
     .header_content p{
         width: auto;
+        font-size: 15px;
     }
 
     /** About Responsive  ************/
@@ -625,11 +666,13 @@ body{
     }
     .about_container h3{
         margin: 15rem 0rem 0rem 0rem;
+        font-size: 30px;
     }
 
     .about_para p{
         width: auto;
         font-family: 'Roboto Slab', sans-serif;
+        font-size: 14px;
     }
 
     .about_container-content{
@@ -687,6 +730,11 @@ body{
     
    
     /***************** Projects Responsive *************/
+    .project_title{
+        font-size: 30px;
+    }
+
+
     #space_img{
         width: 350px;
         height: 190px;
@@ -709,6 +757,7 @@ body{
         width: 350px;
         height: 190px;
         margin: auto;
+        overflow: hidden;
     }
 
     .about_rotate{
@@ -730,6 +779,25 @@ body{
         width: 18.8rem;
     }
 
+    .html-language{
+        font-size: 14px;
+    }
+
+    .work_title{
+        font-size: 30px;
+    }
+
+    .footer_container h2{
+        font-size: 30px;
+    }
+
+    #content_container{
+        font-size: 14px;
+    }
+
+    .job_description_list{
+        font-size: 14px;
+    }
 
 }
 
